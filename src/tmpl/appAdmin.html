@@ -1,0 +1,60 @@
+{{ define "appAdmin" }} {{ template "header" }} {{ if .AccStatus | isAdmin }}
+<h2>All Applications</h2>
+<select id="appList" name="appList">
+ <option value="" selected>Please choose an application</option>
+{{ range $i,$v := .Applications }}
+
+<option value="{{ $v.ApplicationID }}">{{ $v.Applicationname }}</option>
+{{ end }}
+</select> {{ range $i,$v := .Applications }}
+<span id="{{ $v.ApplicationID }}">
+<h3>{{ $v.Applicationname }}</h3>
+<p>Application ID: {{ $v.ApplicationID }}</p>
+<p>Name Space: {{ $v.Namespace }}</p>
+<p>Groups: {{ $v.Groups }}</p>
+<p>Roles: {{ $v.Roles }}</p>
+<p>Fields: {{/* $v.Fields */}}</p>
+<p><form id="getChildren">
+  <input type="hidden" value="{{ $v.ApplicationID }}" name="ApplicationID">
+  <input type="submit" value="Get Child Data">
+</form>
+</p>
+<p>
+<form id="getUsers">
+  <input type="hidden" value="{{ $v.ApplicationID }}" name="ApplicationID">
+  <input type="submit" value="Get App Users">
+</form>
+<p class="result">
+</p>
+</p>
+
+</span> {{ end }}
+
+
+<!-- Not Auth -->
+{{ else }}
+
+<h3>Not authorised to view this page</h3>
+{{ end }} {{ template "footer" }} {{ end }}
+
+<!-- Application Children -->
+{{ define "getChildren" }}
+<h3>Call App Child Data</h3>
+<form id="getChildren">
+  <input type="hidden" value="{{ . }}" name="ApplicationID">
+  <input type="submit" value="Submit">
+</form>
+
+{{ end }}
+
+
+<!-- Application Get Users -->
+{{ define "getUsers" }}
+<h3>Call Get Users</h3>
+<form id="getUsers">
+  <input type="hidden" value="{{ . }}" name="ApplicationID">
+  <input type="submit" value="Submit">
+</form>
+
+
+{{ end }}

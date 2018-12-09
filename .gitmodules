@@ -1,0 +1,6 @@
+[submodule "src/gocsv"]
+	path = src/gocsv
+	url = git@github.com:gocarina/gocsv.git
+[submodule "updateService/src/gocsv"]
+	path = updateService/src/gocsv
+	url = git@github.com:gocarina/gocsv.git

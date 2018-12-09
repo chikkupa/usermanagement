@@ -1,0 +1,24 @@
+{{ define "profilePage"}} {{ template "header" }}
+
+<h3>Profile Page</h3>
+
+<ul>
+  <li><label>Mail              </label>: {{ .Mail }}</li>
+  <li><label>AccStatus         </label>: {{ .AccStatus }}</li>
+  <li><label>AccountID         </label>: {{ .AccountID }}</li>
+  <li><label>Name              </label>: {{ .Name }}</li>
+  <li><label>AccFailedLogins   </label>: {{ .AccFailedLogins }}</li>
+  <li><label>AccIP             </label>: {{ .AccIP }}</li>
+  <li><label>Surname           </label>: {{ .Surname }}</li>
+  <li><label>SecondName        </label>: {{ .SecondName }}</li>
+  <li><label>CompanyName       </label>: {{ .CompanyName }}</li>
+  <li><label>Country           </label>: {{ .Country }}</li>
+  <li><label>State             </label>: {{ .State }}</li>
+  <li><label>AddressSuffix     </label>: {{ .AddressSuffix }}</li>
+  <li><label>Postcode          </label>: {{ .Postcode }}</li>
+  <li><label>Town              </label>: {{ .Town }}</li>
+  <li><label>AccLastLogin      </label>: {{ .AccLastLogin }}</li>
+  <li><label>AccLastFailedLogin</label>: {{ .AccLastFailedLogin }}</li>
+  <li><label>Applications</label>: {{ .Applications }}</li>
+</ul>
+{{ template "footer" }} {{ end }}

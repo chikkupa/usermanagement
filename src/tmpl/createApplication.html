@@ -1,0 +1,32 @@
+{{ define "createApplication" }} {{ template "header" }}
+<h3>Create Application form</h3>
+
+<form id="createApplicationForm">
+  <label for="application_name">Application Name</label> <input type="text" value="testapp01" name="application_name" id="application_name">
+  <br>
+
+  <label for="application_id">Application ID</label> <input type="text" value="testapp01" name="application_id" id="application_id">
+  <br>
+
+  <label for="name_space">Name Space</label> <input type="text" value="testNameSpace" name="name_space" id="name_space">
+  <br>
+
+  <label for="groups">Groups</label> <input type="text" value="testGroup" name="groups" id="groups">
+  <br>
+
+  <label for="roles">Roles</label> <input type="text" value="testRoles" name="roles" id="roles">
+  <br>
+  <!-- <label for="fields">Fields</label> <input type="text" value="testFields" name="fields" id="fields">
+  <br> -->
+  <!--
+  <label for="fieldName">FieldNames</label> <input type="text" value="testFieldName" name="fieldName" id="fieldName">
+  <br>
+  <label for="fieldVal">FieldVal</label> <input type="text" value="testFieldVal" name="fieldVal" id="fieldVal">
+  <br>
+  -->
+
+  <input type="submit" value="Submit">
+</form>
+
+
+{{ template "footer" }} {{ end }}

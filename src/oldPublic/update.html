@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Test Panel</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Insert form</h1>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/insert.html">Insert</a></li>
+      <li><a href="/update.html">Update</a></li>
+      <li><a href="/validate.html">Validate</a></li>
+      <li><a href="/download.html">Download</a></li>
+      <li><a href="/upload.html">Upload</a></li>
+    </ul>
+  </nav>
+  <label for="dynamicField">Dynamic Field</label>
+  <form id="dynamicField">
+    <p>Note Age exists in struct. enter age and it should return with success else error</p>
+    <br>
+    <input type="text" name="dynamicFieldName" id="dynamicFieldName" placeholder="enter dynamic field name">
+    <br>
+    <input type="text" name="dynamicFieldVal" id="dynamicFieldVal" placeholder="enter dynamic field name">
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+
+  <form id="updateForm">
+    <ul id="formFields">
+      <li>
+        <label for="customer_name">Customer Name</label> <input type="text" value="testUser" name="customer_name" id="customer_name">
+      </li>
+      <li>
+        <label for="acc_mail">Account Mail</label> <input type="email" value="acccountmail@mail.com" name="acc_mail" id="acc_mail">
+      </li>
+      <li>
+        <label for="acc_status">Account Status</label> <input type="text" value="admin" name="acc_status" id="acc_status">
+      </li>
+      <li>
+        <label for="customer_surname">Customer Surname</label> <input type="text" value="testSurname" name="customer_surname" id="customer_surname">
+      </li>
+      <li>
+        <label for="customer_secondname">Customer Second Name</label> <input type="text" value="testSecondName" name="customer_secondname" id="customer_secondname">
+      </li>
+      <li>
+        <label for="company_name">Company Name</label> <input type="text" value="testCompanyName" name="company_name" id="company_name">
+      </li>
+      <li>
+        <label for="state">State</label> <input type="text" value="testState" name="state" id="state">
+      </li>
+      <li>
+        <label for="country">Country</label> <input type="text" value="testCountry" name="country" id="country">
+      </li>
+      <li>
+        <label for="address_suffix">Address Suffix</label> <input type="text" value="testAddressSuffix" name="address_suffix" id="address_suffix">
+      </li>
+      <li>
+        <label for="post_code">PostCode</label> <input type="text" value="testPostCode" name="post_code" id="post_code">
+      </li>
+      <li>
+        <label for="town">Town</label> <input type="text" value="testTown" name="town" id="town">
+      </li>
+      <li>
+        <label for="phone">Phone</label> <input type="text" value="testPhone" name="phone" id="phone">
+      </li>
+    </ul>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <p class="result"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!-- premium user page -->
+{{ define "adminPage"}}  {{ template "header" }} 
+{{ if .AccStatus | isAdmin }}
+<h3>Welcome Admin User!</h3>
+{{ else }}
+<h3>User not authorised to view page</h3>
+{{ end }}
+{{ end }}
+
+<!-- premium user page -->
+{{ define "premiumPage"}}  {{ template "header" }} 
+{{ if .AccStatus | isPremium }}
+<h3>Welcome Premium User!</h3>
+{{ else }}
+<h3>User not authorised to view page</h3>
+{{ end }}
+{{ end }}
+
+<!-- premium user page -->
+{{ define "defaultPage"}} {{ template "header" }}
+{{ if .AccStatus | isDefault }}
+<h3>Welcome Default User!</h3>
+{{ else }}
+<h3>User not authorised to view page</h3>
+{{ end }}
+{{ end }}
+
+

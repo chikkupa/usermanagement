@@ -1,0 +1,46 @@
+Outline for the user usermanagement micro service.
+
+Objective: Create a microservice that stores user previlage information, and provides status validation for the same.
+
+Requirements:
+1) Must be a google appengine service.
+  2) Login via Google, and later Facebook, is expected.
+3) User should have various previlage levels like Admin, Premium and Basic(default)
+  4) Export and import for data should be possible via api
+
+  Solution:
+  1) /api/insert: collests username information and stores it as a Premium user. Primary use for this is to insert user status collected from various client applications eg. PPP and calender
+  2) /api/admin: collects username and stores it as an Admin. tentative design required if we plan to use google's access control for special function. Postponed till final auth
+  3) /api/validate: return user previlage level (Admin, Premium or Basic) after collecting username via http
+  4) /api/file: accepts/provides file in csv(?) after authenticating Admin user. Previlage level for different users can be looked at as per use case
+
+  User Details:
+  Details for user to be stored
+  1) UserName: string, storing username
+  2) Role: string, defines Previlage level (default, premium or admin)
+
+  Api Details:
+  1) /api/insert: shall collect POST fields like username and role. role can be premium or admin. default role if required to be set shall be default
+  2) /api/validate: shall accept POST fields username. and return json role, either default, premium or admin, and error nil if found else error "user not found".
+  3) /api/file: Validates via google auth, accepts GET field file either export or import. Returns csv file if export else accepts csv file if import
+
+
+
+Error details:
+
+All return from the service is in the form of json.
+Success Format:
+{ "Body": "<Data>", "ErrCode": "0"}
+
+Err Format
+{ "Body": "<Err Message>", "ErrCode": "<Non zero value>"}
+
+ErrCode: can be 0: success or 500: error
+
+Custom defined errors:
+1) "InsertDB err: Account Status definition unknown" Error caused when AccStatus does not match either default, premium or admin
+2) "Error fetching next user: %v" Error caused when unable to retreve user from datastore
+3) "DB: Account already exists" Error caused when account is found in the datastore
+
+
+

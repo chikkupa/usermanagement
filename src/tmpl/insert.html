@@ -1,0 +1,103 @@
+{{ define "insertFormDetails"}}
+  <ul id="formFields">
+    <li>
+      <label for="customer_name">Customer Name</label> <input type="text" value="testUser" name="customer_name" id="customer_name">
+    </li>
+    <li>
+      <label for="acc_mail">Account Mail</label> <input type="email" value="acccountmail@mail.com" name="acc_mail" id="acc_mail">
+    </li>
+    <li>
+      <label for="acc_status">Account Status</label> <input type="text" value="admin" name="acc_status" id="acc_status">
+    </li>
+    <li>
+      <label for="customer_surname">Customer Surname</label> <input type="text" value="testSurname" name="customer_surname" id="customer_surname">
+    </li>
+    <li>
+      <label for="customer_secondname">Customer Second Name</label> <input type="text" value="testSecondName" name="customer_secondname" id="customer_secondname">
+    </li>
+    <li>
+      <label for="company_name">Company Name</label> <input type="text" value="testCompanyName" name="company_name" id="company_name">
+    </li>
+    <li>
+      <label for="state">State</label> <input type="text" value="testState" name="state" id="state">
+    </li>
+    <li>
+      <label for="country">Country</label> <input type="text" value="testCountry" name="country" id="country">
+    </li>
+    <li>
+      <label for="address_suffix">Address Suffix</label> <input type="text" value="testAddressSuffix" name="address_suffix" id="address_suffix">
+    </li>
+    <li>
+      <label for="post_code">PostCode</label> <input type="text" value="testPostCode" name="post_code" id="post_code">
+    </li>
+    <li>
+      <label for="town">Town</label> <input type="text" value="testTown" name="town" id="town">
+    </li>
+    <li>
+      <label for="phone">Phone</label> <input type="text" value="testPhone" name="phone" id="phone">
+    </li>
+    <li>
+      <label for="applications">applications</label> <input type="text" value="testapplications" name="applications" id="applications">
+    </li>
+  </ul>
+  <br>
+  <input type="submit" value="Submit">
+  {{ end }}
+
+{{ define "insertFormDetailsCustomFileds"}}
+  <ul id="formFields">
+    <li>
+      <label for="Name">Customer Name</label> <input type="text" value="testUser" name="Name" id="Name">
+    </li>
+    <li>
+      <label for="Mail">Account Mail</label> <input type="email" value="acccountmail@mail.com" name="Mail" id="Mail">
+    </li>
+    <li>
+      <label for="AccStatus">Account Status</label> <input type="text" value="admin" name="AccStatus" id="AccStatus">
+    </li>
+    <li>
+      <label for="Surname">Customer Surname</label> <input type="text" value="testSurname" name="Surname" id="Surname">
+    </li>
+    <li>
+      <label for="SecondName">Customer Second Name</label> <input type="text" value="testSecondName" name="SecondName" id="SecondName">
+    </li>
+    <li>
+      <label for="CompanyName">Company Name</label> <input type="text" value="testCompanyName" name="CompanyName" id="CompanyName">
+    </li>
+    <li>
+      <label for="State">State</label> <input type="text" value="testState" name="State" id="State">
+    </li>
+    <li>
+      <label for="Country">Country</label> <input type="text" value="testCountry" name="Country" id="Country">
+    </li>
+    <li>
+      <label for="AddressSuffix">Address Suffix</label> <input type="text" value="testAddressSuffix" name="AddressSuffix" id="AddressSuffix">
+    </li>
+    <li>
+      <label for="Postcode">PostCode</label> <input type="text" value="testPostCode" name="Postcode" id="Postcode">
+    </li>
+    <li>
+      <label for="Town">Town</label> <input type="text" value="testTown" name="Town" id="Town">
+    </li>
+    <li>
+      <label for="Phone">Phone</label> <input type="text" value="testPhone" name="Phone" id="Phone">
+    </li>
+    <li>
+      <label for="Applications">Applications</label> <input type="text" value="testApplications" name="Applications" id="Applications">
+    </li>
+  </ul>
+  <br>
+  <input type="submit" value="Submit">
+  {{ end }}
+
+
+
+{{ define "insertPage" }} {{ template "header" }} 
+<h3>Insert Form</h3>
+
+<form id="insertForm">
+  {{ template "insertFormDetails" }}
+  {{/* template "insertFormDetailsCustomFileds" */}}
+</form>
+<p class="result"></p>
+{{ template "footer" }} {{ end }}

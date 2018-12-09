@@ -1,0 +1,14 @@
+runtime: go
+api_version: go1
+
+handlers:
+  - url: /insert
+    script: router.go
+    login: admin
+  - url: /validate
+    script: router.go
+    login: admin
+  - url: /file
+    script: router.go
+  - url: /.*
+    script: _go_app

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Test Panel</title>
+</head>
+
+<body>
+  <h1>Insert form</h1>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/insert.html">Insert</a></li>
+      <li><a href="/update.html">Update</a></li>
+      <li><a href="/validate.html">Validate</a></li>
+      <li><a href="/download.html">Download</a></li>
+      <li><a href="/upload.html">Upload</a></li>
+    </ul>
+  </nav>
+
+  <form action="/api/file" method="POST" enctype="multipart/form-data">
+    <br> <label for="Upload">Upload</label> <input type="checkbox" value="Upload" name="FileUpload" id="Upload">
+    <br> <label for="FileName">FileName</label> <input type="file" value="" name="FileName" id="FileName">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  usermanagement:
+    image: google/cloud-sdk:latest
+    ports:
+      - 8080:8080
+      - 8000:8000
+    volumes:
+      - ./src:/src
+    working_dir: /src
+    command: dev_appserver.py --clear_datastore=yes --host=0.0.0.0 --admin_host=0.0.0.0 --enable_host_checking=0 app.yaml
+# command: /usr/lib/google-cloud-sdk/platform/google_appengine/goapp serve app.yaml --host=0.0.0.0
+
+  pocTest:
+    image: google/cloud-sdk:latest
+    ports:
+      - 9090:9090
+      - 9000:9000
+    volumes:
+      - ./pocTest/src:/src
+    working_dir: /src
+    command: dev_appserver.py --clear_datastore=yes --host=0.0.0.0 --port=9090 --admin_host=0.0.0.0 --admin_port=9000 --enable_host_checking=0 app.yaml

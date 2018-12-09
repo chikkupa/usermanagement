@@ -1,0 +1,37 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Test Panel</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+  <h1><a href="/">User Management Service</a></h1>
+  <nav>
+    <ul>
+      <li id="loginURL"></li>
+      <li><a href="/insertPage">Insert</a></li>
+      <li><a href="/updatePage">Update</a></li>
+      <li><a href="/validatePage">Validate</a></li>
+      <li><a href="/downloadPage">Download</a></li>
+      <li><a href="/uploadPage">Upload</a></li>
+      <li><a href="/profilePage">Profile Page</a></li>
+      <li><a href="/adminPage">Is User Admin?</a></li>
+      <li><a href="/premiumPage">Is User Premium?</a></li>
+      <li><a href="/defaultPage">Is User Default?</a></li>
+      <li><a href="/createApplication">Create new application</a></li>
+      <li><a href="/appAdmin">Application Admin</a></li>
+      <li><a href="/testapp01">testapp01</a></li>
+      <li><a href="/testapp02">testapp02</a></li>
+      <li><a href="/testapp03">testapp03</a></li>
+    </ul>
+  </nav>
+  {{ end }} {{ define "footer" }}
+</body>
+
+</html>
+{{ end }} {{ define "indexPage" }} {{ template "header" }} {{ template "footer" }} {{ end }}

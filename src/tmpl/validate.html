@@ -1,0 +1,12 @@
+{{ define "validatePage" }}
+{{ template "header" }}
+ <h3>Validate form</h3>
+
+  <form id="validateForm">
+    <p>Checks if Customer account exists</p>
+    <label for="acc_mail">Customer Email</label> <input type="text" value="test@example.com" name="acc_mail" id="acc_mail">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+{{ template "footer" }}
+{{ end }}

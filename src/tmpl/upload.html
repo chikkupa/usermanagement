@@ -1,0 +1,9 @@
+{{ define "uploadPage"}} {{ template "header"}}
+<h3>Upload Form</h3>
+<form action="/api/file" method="POST" enctype="multipart/form-data">
+  <br> <label for="Upload">Upload</label> <input type="checkbox" value="Upload" name="FileUpload" id="Upload">
+  <br> <label for="FileName">FileName</label> <input type="file" value="" name="FileName" id="FileName">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+{{ template "footer" }} {{ end }}

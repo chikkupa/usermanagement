@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Test Panel</title>
+</head>
+
+<body>
+  <h1>Insert form</h1>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/insert.html">Insert</a></li>
+      <li><a href="/update.html">Update</a></li>
+      <li><a href="/validate.html">Validate</a></li>
+      <li><a href="/download.html">Download</a></li>
+      <li><a href="/upload.html">Upload</a></li>
+    </ul>
+  </nav>
+  <form action="http://localhost:8080/api/file" method="POST">
+    <br> <label for="Download">Download</label> <input type="checkbox" value="Download" name="FileDownload" id="Download">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+</body>
+
+</html>
